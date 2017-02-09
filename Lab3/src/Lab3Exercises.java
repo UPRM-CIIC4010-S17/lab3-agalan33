@@ -14,8 +14,8 @@ public class Lab3Exercises {
 	    int centerX = (int) ((dimension.getWidth() - myFrame.getWidth()) / 2);
 	    int centerY = (int) ((dimension.getHeight() - myFrame.getHeight()) / 2);
 		
-		myFrame.setLocation(centerX -100, centerY -100);
-		myFrame.setSize(200, 200);
+		myFrame.setLocation(centerX -150, centerY -150);
+		myFrame.setSize(300, 300);
 		myFrame.setVisible(true);
 		
 		MyPanelClass myPanel = new MyPanelClass();

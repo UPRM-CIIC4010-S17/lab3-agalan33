@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Insets;
 import java.awt.Polygon;
+import java.awt.Rectangle;
 
 import javax.swing.JPanel;
  
@@ -19,7 +20,7 @@ public class MyPanelClass extends JPanel {
                         int height = y2 - y1;
  
                         //Paint the background
-                        g.setColor(Color.BLACK);
+                        g.setColor(Color.WHITE);
                         g.fillRect(x1, y1, width + 1, height + 1);
                         
 //                        //Draw Border
@@ -57,18 +58,52 @@ public class MyPanelClass extends JPanel {
 //                        g.setColor(Color.YELLOW);
 //                        g.fillPolygon(p);
                         
-                        Polygon p2 = new Polygon();
-                        p2.addPoint(x1 + 25, y1 + 73);
-                        p2.addPoint(x1 + 41, y1 + 73);
-                        p2.addPoint(x1 + 47, y1 + 58);
-                        p2.addPoint(x1 + 53, y1 + 73);
-                        p2.addPoint(x1 + 69, y1 + 73);
-                        p2.addPoint(x1 + 56, y1 + 83);
-                        p2.addPoint(x1 + 61, y1 + 98);
-                        p2.addPoint(x1 + 47, y1 + 88);
-                        p2.addPoint(x1 + 34, y1 + 98);
-                        p2.addPoint(x1 + 38, y1 + 83);
-                        g.setColor(Color.WHITE);
-                        g.drawPolygon(p2);
+//                        Polygon p2 = new Polygon();
+//                        p2.addPoint(x1 + 25, y1 + 73);
+//                        p2.addPoint(x1 + 41, y1 + 73);
+//                        p2.addPoint(x1 + 47, y1 + 58);
+//                        p2.addPoint(x1 + 53, y1 + 73);
+//                        p2.addPoint(x1 + 69, y1 + 73);
+//                        p2.addPoint(x1 + 56, y1 + 83);
+//                        p2.addPoint(x1 + 61, y1 + 98);
+//                        p2.addPoint(x1 + 47, y1 + 88);
+//                        p2.addPoint(x1 + 34, y1 + 98);
+//                        p2.addPoint(x1 + 38, y1 + 83);
+//                        g.setColor(Color.WHITE);
+//                        g.drawPolygon(p2);
+                        
+                  //Draw the rectangle of the flag 
+                  g.setColor(Color.BLACK);
+                  g.drawRect(x1+10, y1+10, x1+210, y1+150);
+                  
+                  //RedFrames
+                  g.setColor(Color.RED);
+                  g.fillRect(x1+10, y1+10, x1+210, (y1+150)/5);
+                  g.fillRect(x1+10, y1+70, x1+210, (y1+150)/5);
+                  g.fillRect(x1+10, y1+130, x1+210, (y1+150)/5);
+                  
+                  //BlueTriangle
+                  
+                  Polygon triangle = new Polygon();
+                  triangle.addPoint(x1+10, y1+10);
+                  triangle.addPoint(x1+10, y1+160);
+                  triangle.addPoint(x1+115, y1+85);
+                  g.setColor(Color.BLUE);
+                  g.fillPolygon(triangle);
+                  
+                  Polygon estrella = new Polygon();
+                  estrella.addPoint(x1 + 25, y1 + 73);
+                  estrella.addPoint(x1 + 41, y1 + 73);
+                  estrella.addPoint(x1 + 47, y1 + 58);
+                  estrella.addPoint(x1 + 53, y1 + 73);
+                  estrella.addPoint(x1 + 69, y1 + 73);
+                  estrella.addPoint(x1 + 56, y1 + 83);
+                  estrella.addPoint(x1 + 61, y1 + 98);
+                  estrella.addPoint(x1 + 47, y1 + 88);
+                  estrella.addPoint(x1 + 34, y1 + 98);
+                  estrella.addPoint(x1 + 38, y1 + 83);
+                  g.setColor(Color.WHITE);
+                  g.fillPolygon(estrella);
+                  
             }
 }
